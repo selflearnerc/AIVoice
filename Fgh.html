@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Selflearnerc – AI Voice Intro</title>
+</head>
+<body style="background-color:#0D1117; color:white; font-family: Fira Code; text-align: center;">
+
+  <!-- 🎯 TYPING ANIMATION -->
+  <p>
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=👋+Hi+there%2C+I'm+Selflearnerc!;🧠+Self-Learning+AI+%26+Python+Every+Day;🎯+Future+Goal:+Work+at+Google+or+OpenAI;💬+Learning+with+ChatGPT's+Help" alt="Typing Animation" />
+  </p>
+
+  <!-- 🌊 MODERN BANNER -->
+  <p>
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=200&section=header&text=Welcome%20to%20My%20AI%20World!&fontSize=36&fontColor=ffffff&animation=fadeIn" />
+  </p>
+
+  <!-- 🔊 AI VOICE SCRIPT -->
+  <script>
+    window.onload = function () {
+      const textLines = [
+        "Hi there, I'm Selflearnerc!",
+        "Self-Learning AI and Python Every Day.",
+        "Future Goal: Work at Google or OpenAI.",
+        "Learning with ChatGPT's Help."
+      ];
+
+      let index = 0;
+
+      function speakNextLine() {
+        if (index < textLines.length) {
+          const utterance = new SpeechSynthesisUtterance(textLines[index]);
+          utterance.lang = "en-US";
+          utterance.rate = 1;
+          utterance.pitch = 1;
+          speechSynthesis.speak(utterance);
+          index++;
+          setTimeout(speakNextLine, 3000); // wait 3 seconds before next line
+        }
+      }
+
+      speakNextLine();
+    };
+  </script>
+
+</body>
+</html>
